@@ -1,0 +1,23 @@
+package RestAssured.Focus;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CommercialPage {
+	WebDriver driver;
+//commercialpage
+	@FindBy(xpath = "//span[contains(text(),'COMMERCIAL LOAN PROGRAMS')]")
+	private WebElement cpage;
+
+	public void clickoncpage() {
+		cpage.click();
+	}
+
+	public CommercialPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+}
